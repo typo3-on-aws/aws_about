@@ -78,7 +78,6 @@ class AboutController
     {
         $extensions = [];
         $packageManager = GeneralUtility::makeInstance(PackageManager::class);
-        $activePackages = $this->getActivePackages($packageManager);
         foreach ($packageManager->getAvailablePackages() as $package) {
             // Skip system extensions (= type: typo3-cms-framework)
             if ($package->getValueFromComposerManifest('type') !== 'typo3-cms-extension') {
@@ -95,7 +94,7 @@ class AboutController
                     'icon' => $this->getExtensionIcon($package->getPackageKey()),
                     'authors' => $package->getValueFromComposerManifest('authors'),
                     'homepage' => $package->getValueFromComposerManifest('homepage'),
-                    'active' => (in_array($package->getPackageKey(), $activePackages) ? true : false)
+                    'active' => ($this->isActive($package->getPackageKey()) ? true : false)
                 ];
             }
         }
@@ -103,18 +102,14 @@ class AboutController
     }
 
     /**
-     * Returns a list of all active packages
+     * Shortcut method to check if an extension is loaded
      *
-     * @param PackageManager
-     * @return array
+     * @param string $extensionKey
+     * @return bool
      */
-    protected function getActivePackages(PackageManager $packageManager): array
+    protected function isActive(string $extensionKey): bool
     {
-        $activePackages = [];
-        foreach ($packageManager->getActivePackages() as $package) {
-            $activePackages[] = $package->getPackageKey();
-        }
-        return $activePackages;
+        return ExtensionManagementUtility::isLoaded($extensionKey);
     }
 
     /**
@@ -129,13 +124,17 @@ class AboutController
     }
 
     /**
-     * Returns the absolutely file system path to the Extension icon, if an icon exists
+     * Returns the absolutely file system path to the Extension icon, if extension is loaded and an icon exists
      *
      * @param string $extensionKey
      * @return string|null
      */
     protected function getExtensionIcon(string $extensionKey): ?string
     {
+        if ($this->isActive($extensionKey) === false) {
+            return null;
+        }
+
         $path = ExtensionManagementUtility::extPath($extensionKey);
         foreach (['svg', 'png', 'gif'] as $fileExtension) {
             $iconFile = $path . 'Resources/Public/Icons/Extension.' . $fileExtension;
