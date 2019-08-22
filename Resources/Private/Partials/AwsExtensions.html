@@ -1,0 +1,44 @@
+<div class="aws-extensions">
+    <h2 class="h2 text-center">
+        <f:comment><!-- <core:icon identifier="content-plugin" size="default" /> --></f:comment>
+        <f:translate key="LLL:EXT:aws_about/Resources/Private/Language/Modules/locallang.xlf:aws_extensions.headline" />
+    </h2>
+    <p class="text-center">
+        <f:translate key="LLL:EXT:aws_about/Resources/Private/Language/Modules/locallang.xlf:aws_extensions.bodytext" />
+    </p>
+    <f:for each="{awsExtensions}" as="extension">
+        <div class="panel panel-default">
+            <div class="panel-body panel-body-highlightlinks">
+                <h3 class="h3">
+                    <f:if condition="{extension.icon}">
+                    <f:then>
+                        <f:image src="{extension.icon}" class="extension-icon" />
+                    </f:then>
+                    </f:if>
+                    <span class="extension-title">
+                        {extension.title}
+                    </span>
+                    <f:if condition="{extension.active}">
+                    <f:then>
+                        <span class="label label-success pull-right">
+                            <f:translate key="LLL:EXT:aws_about/Resources/Private/Language/Modules/locallang.xlf:aws_extensions.active" />
+                        </span>
+                    </f:then>
+                    <f:else>
+                        <span class="label label-danger pull-right">
+                            <f:translate key="LLL:EXT:aws_about/Resources/Private/Language/Modules/locallang.xlf:aws_extensions.inactive" />
+                        </span>
+                    </f:else>
+                    </f:if>
+                </h3>
+                <p>
+                    <strong>{extension.key}</strong>
+                    <f:translate key="LLL:EXT:aws_about/Resources/Private/Language/Modules/locallang.xlf:aws_extensions.version" />
+                    {extension.version}
+                    <br />
+                    {extension.description}
+                </p>
+            </div>
+        </div>
+    </f:for>
+</div>

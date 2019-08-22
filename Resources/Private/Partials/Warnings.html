@@ -1,0 +1,20 @@
+<f:if condition="{warnings}">
+    <f:be.infobox title="{f:translate(key: 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:warning.header')}" state="2">
+        <f:if condition="{f:count(subject: warnings)} > 1">
+            <f:then>
+                <ul>
+                    <f:for each="{warnings}" as="warning">
+                        <li>{warning -> f:format.raw()}</li>
+                    </f:for>
+                </ul>
+            </f:then>
+            <f:else>
+                <p>
+                    <f:for each="{warnings}" as="warning">
+                        {warning -> f:format.raw()}
+                    </f:for>
+                </p>
+            </f:else>
+        </f:if>
+    </f:be.infobox>
+</f:if>

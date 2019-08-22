@@ -1,0 +1,64 @@
+/**
+ * This file is part of the TYPO3 CMS Extension "AWS About"
+ * Extension author: Michael Schams - https://schams.net
+ *
+ * For copyright and license information, please read the README.md
+ * file distributed with this source code.
+ *
+ * @package     TYPO3
+ * @subpackage  aws_about
+ * @author      Michael Schams <schams.net>
+ * @link        https://typo3-on-aws.org
+ */
+
+div.aws-about-module {
+    padding-bottom: 2em;
+}
+
+div.aws-about-module h2 {
+    font-weight: bold;
+}
+
+div.aws-about-module div.banner {
+    margin-bottom: 2em;
+}
+
+div.aws-about-module div.logos {
+    font-size: 4em;
+}
+
+div.aws-about-module div.logos img.typo3 {
+    margin-bottom: 0.6em;
+}
+
+div.aws-about-module div.logos img.aws {
+}
+
+div.aws-about-module div.logos span.plus {
+    margin: 0 0.2em;
+}
+
+div.aws-about-module div.banner h1 {
+    margin-top: 0.6em;
+}
+
+div.aws-about-module div.introduction .panel {
+    min-height: 140px;
+}
+
+div.aws-about-module div.introduction ul {
+    padding-left: 2em;
+}
+
+div.aws-about-module div.introduction ul li {
+    list-style: square;
+}
+
+div.aws-about-module div.aws-extensions {
+}
+
+div.aws-about-module div.aws-extensions img.extension-icon {
+    max-width: 24px;
+    max-height: 24px;
+    margin-right: 0.4em;
+}

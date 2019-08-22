@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+	<file t3:id="1564438918" source-language="en" datatype="plaintext" original="messages" date="2019-08-01T00:00:00Z" product-name="aws_about">
+		<header/>
+		<body>
+			<trans-unit id="banner.headline">
+				<source>TYPO3 CMS on Amazon Web Services (AWS)</source>
+			</trans-unit>
+			<trans-unit id="banner.claim">
+				<source>Enterprise content management system meets high-end cloud hosting solutions.</source>
+			</trans-unit>
+
+			<trans-unit id="introduction.headline">
+				<source>Headline</source>
+			</trans-unit>
+			<trans-unit id="introduction.documentation">
+				<source>Documentation</source>
+			</trans-unit>
+
+			<trans-unit id="aws_extensions.headline">
+				<source>AWS Extensions</source>
+			</trans-unit>
+			<trans-unit id="aws_extensions.bodytext">
+				<source>The following AWS-related extensions are currently available in this system.</source>
+			</trans-unit>
+			<trans-unit id="aws_extensions.version">
+				<source>version</source>
+			</trans-unit>
+			<trans-unit id="aws_extensions.active">
+				<source>active</source>
+			</trans-unit>
+			<trans-unit id="aws_extensions.inactive">
+				<source>inactive</source>
+			</trans-unit>
+
+			<trans-unit id="endText">
+				<source>Features may vary depending on your website configuration and user permissions.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,27 @@
+{
+	"name": "typo3-on-aws/aws-about",
+	"type": "typo3-cms-extension",
+	"description": "Backend welcome screen for TYPO3-on-AWS instances",
+	"homepage": "https://typo3-on-aws.org",
+	"authors": [
+        {
+            "name": "Michael Schams",
+            "role": "Developer"
+        }
+    ],
+	"require": {
+		"typo3/cms-core": "^10"
+	},
+	"conflict": {
+		"typo3/cms": "*"
+	},
+	"replace": {
+		"aws_about": "self.version",
+		"typo3-ter/aws-about": "self.version"
+	},
+	"autoload": {
+		"psr-4": {
+			"Typo3OnAws\\AwsAbout\\": "Classes/"
+		}
+	}
+}

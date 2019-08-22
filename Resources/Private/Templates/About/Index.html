@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers" />
+
+<f:be.pageRenderer pageTitle="TYPO3-on-AWS"
+	includeCssFiles="{0: '{f:uri.resource(path: \'Css/aws_about.css\', extensionName: \'AwsAbout\')}'}" />
+
+<div class="container-small aws-about-module">
+    <f:render partial="Banner" />
+    <f:render partial="Warnings" arguments="{warnings: warnings}" />
+    <f:render partial="Introduction" />
+    <f:render partial="AwsExtensions" arguments="{awsExtensions: awsExtensions}" />
+    <p>
+        <em class="text-muted">
+            <f:translate key="LLL:EXT:aws_about/Resources/Private/Language/Modules/locallang.xlf:endText" />
+        </em>
+    </p>
+</div>
