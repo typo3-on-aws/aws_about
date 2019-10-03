@@ -62,3 +62,10 @@ div.aws-about-module div.aws-extensions img.extension-icon {
     max-height: 24px;
     margin-right: 0.4em;
 }
+
+div.aws-about-module a,
+div.aws-about-module a:active,
+div.aws-about-module a:focus,
+div.aws-about-module a:hover {
+    color: #0c52d0;
+}
