@@ -11,7 +11,10 @@
 			</trans-unit>
 
 			<trans-unit id="introduction.headline">
-				<source>Headline</source>
+				<source>TYPO3 Slack</source>
+			</trans-unit>
+			<trans-unit id="introduction.bodytext">
+				<source>Join us on Slack (free TYPO3 account required) and receive support by the TYPO3 community.</source>
 			</trans-unit>
 			<trans-unit id="introduction.documentation">
 				<source>Documentation</source>
