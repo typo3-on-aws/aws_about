@@ -12,6 +12,7 @@
  */
 
 div.aws-about-module {
+    padding-top: 6em;
     padding-bottom: 2em;
 }
 
@@ -44,6 +45,21 @@ div.aws-about-module div.banner h1 {
 
 div.aws-about-module div.introduction .panel {
     min-height: 140px;
+}
+
+div.aws-about-module .t3rrific-logo {
+	max-width: 100px;
+	position: absolute;
+	top: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+	z-index: 1000;
+}
+
+div.aws-about-module .t3rrific-logo img {
+    width: 100%;
+    height: 100%;
 }
 
 div.aws-about-module div.introduction ul {

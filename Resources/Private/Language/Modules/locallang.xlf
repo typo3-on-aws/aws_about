@@ -10,14 +10,11 @@
 				<source>Enterprise content management system meets high-end cloud hosting solutions.</source>
 			</trans-unit>
 
-			<trans-unit id="introduction.headline">
-				<source>TYPO3 Slack</source>
+			<trans-unit id="introduction.support">
+				<source>Free and Commercial Support</source>
 			</trans-unit>
-			<trans-unit id="introduction.bodytext">
-				<source>Join us on Slack (free TYPO3 account required) and receive support by the TYPO3 community.</source>
-			</trans-unit>
-			<trans-unit id="introduction.documentation">
-				<source>Documentation</source>
+			<trans-unit id="introduction.links-and-resources">
+				<source>Links and Resources</source>
 			</trans-unit>
 
 			<trans-unit id="aws_extensions.headline">
